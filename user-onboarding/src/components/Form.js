@@ -9,6 +9,11 @@ export default function UserForm (props) {
         errors
     } = props
 
+    const onSubmit = evt => {
+        evt.preventDefault()
+        submit()
+    }
+
 
 
 
@@ -22,7 +27,7 @@ export default function UserForm (props) {
                 <div>{errors.terms}</div>
             </div>
             <label>Name:
-           <input name='name' type='text' value={value.username} placeholder="enter your name" onChange={change}/>
+           <input name='username' type='text' value={value.username} placeholder="enter your name" onChange={change}/>
             </label>
             <label>Email:
            <input name='email' type='email' value={value.email} placeholder="enter your email" onChange={change}/>

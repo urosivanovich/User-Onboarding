@@ -83,7 +83,7 @@ function App() {
         value={formValues}
         change={change}
         submit={formSubmit}
-        isabled={disabled}
+        disabled={disabled}
         errors={formErrors}
      />
      <User users={users} />
