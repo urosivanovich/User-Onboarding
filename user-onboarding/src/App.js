@@ -60,6 +60,7 @@ function App() {
   const postUser = newUser => {
     axios.post('https://reqres.in/api/users', newUser)
     .then(resp => {
+      console.log(resp)
       setUsers([resp.data, ...users])
     })
     .catch(err=> {
@@ -72,9 +73,10 @@ function App() {
     const newUser = {
       username: formValues.username.trim(),
       email: formValues.email.trim(),
-      password: formValues.trim(),
+      password: formValues.password.trim(),
       terms: formValues.terms,
-    }
+    } 
+    console.log('work')
     postUser(newUser)
     setUsers(users.concat(newUser))
   }

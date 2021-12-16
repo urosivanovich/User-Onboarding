@@ -43,7 +43,10 @@ export default function UserForm (props) {
     
 
 return (
-        <StyledForm onSubmit={submit}>
+        <StyledForm onSubmit={(e) => {
+            e.preventDefault()
+            submit()
+        }}>
             <StyledDiv className="errors">
                 <div>{errors.username}</div>
                 <div>{errors.email}</div>
