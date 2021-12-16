@@ -16,7 +16,7 @@ const formSchema = yup.object().shape({
     .required('Password is required'),
     terms: yup
     .boolean()
-    .required('please agree with our policy').oneOf([true], "* You must agree to the Terms of Service"),
+    .oneOf([true], "* You must agree to the Terms of Service"),
 
 })
 

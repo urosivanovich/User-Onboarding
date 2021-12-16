@@ -8,7 +8,6 @@ flex-direction:column;
 margin:auto;
 margin-top:50px;
 width:200px;
-
 justify-content:center;
 label{
     margin:10px;
