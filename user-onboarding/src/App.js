@@ -19,17 +19,25 @@ const initialFormErrors = {
   username: '',
   email: '',
   password: '',
+  terms: ''
 }
 
 
 const initialUsers = []
-const initialDisabled = true
+const initialDisabled = false
 
 function App() {
   const [users, setUsers] = useState(initialUsers)
   const [formValues, setFormValues] = useState(initialFormValues)
   const [formErrors, setFormErrors] = useState(initialFormErrors)
   const [disabled, setDisabled] = useState(initialDisabled)
+
+  // const getUsers = () => {
+  //   axios.get('https://reqres.in/api/users')
+  //   .then(resp => {
+  //     setFriends(resp.data)
+  //   })
+  // }
 
   
 
@@ -78,7 +86,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>FORM</h1>
+      <h1>Sign in</h1>
       <Form 
         value={formValues}
         change={change}
